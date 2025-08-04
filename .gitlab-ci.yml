@@ -1,0 +1,10 @@
+stages:
+  - test
+
+test_nginx:
+  stage: test
+  script:
+    - echo "Проверка наличия nginx..."
+    - which nginx && nginx -v
+  tags:
+    - shell-runner
